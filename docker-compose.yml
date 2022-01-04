@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/mongo:/data/db
+    ports:
+        - 27017:27017
+
+  python3.9:
+    build: .
+    ports:
+      - "8887:8887"
+    command: ["python", "main.py"]
+    volumes:
+      - ./:/home/dev/code/
+
+  
