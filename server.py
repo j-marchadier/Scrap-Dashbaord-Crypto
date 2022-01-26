@@ -16,11 +16,11 @@ def home():
     fig = px.line(df, x='date', y='open', markers=True)
     fig.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'rgba(0, 0, 0, 0)'})
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-    return render_template('notdash.html', graphJSON=graphJSON)
+    return render_template('template.html', graphJSON=graphJSON,data=db.list_collection_names())
 
 
 if __name__ == '__main__':
-    time.sleep(1)
+    #time.sleep(1)
 
     # Coonect to MONGODB
     client = MongoClient("0.0.0.0:27017")

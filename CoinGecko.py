@@ -46,7 +46,7 @@ if __name__ == "__main__":
     links = allLinks(jsonCryptoName, ["2022-01-18", "2021-10-21"])
 
     # Coonect to MONGODB
-    client = MongoClient("0.0.0.0:27017")
+    client = MongoClient("localhost",27017)
 
     # Create our database
     db = client["coingecko"]
