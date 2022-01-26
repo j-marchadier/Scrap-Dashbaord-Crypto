@@ -1,4 +1,6 @@
-flask
-scrapy
 pymongo
-
+requests
+bs4
+flask
+pandas
+plotly
