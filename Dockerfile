@@ -1,12 +1,12 @@
 FROM python:3.9
 
+RUN mkdir /app/ && mkdir /app/templates/
+
+WORKDIR /app/
 # Install dependencies.
+ADD templates/ ./templates/
 ADD requirements.txt .
-RUN pip update | pip upgrade | pip install -r requirements.txt
-
-# Add actual source code.
 ADD CoinGecko.py .
+ADD server.py .
 
-EXPOSE 8887
-
-CMD ["python", "CoinGecko.py"]
+RUN pip update | pip upgrade | pip install -r requirements.txt

@@ -12,7 +12,7 @@ services:
     ports:
         - 27017:27017
 
-  python3.9:
+  pythonscraping:
     build: .
     container_name: CoinGecko
     depends_on:
@@ -21,4 +21,11 @@ services:
       - "8887:8887"
     command: ["python", "CoinGecko.py"]
 
-  
+  pythonflask:
+    build: .
+    container_name: Flask
+    depends_on:
+      - pythonscraping
+    ports:
+      - "5001:5001"
+    command: [ "python","server.py"]
