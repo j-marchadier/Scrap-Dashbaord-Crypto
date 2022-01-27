@@ -91,9 +91,9 @@ def IA(crypto):
     y_pred_out_arima.index = range(train_size, len(df))
     df["arima"] = y_pred_out_arima
 
-    fig = px.line(df, x='date', y=["train", "test", "sarimax", "arima"])
+    fig = px.line(df, x='date', y=["train", "test", "sarimax", "arima"], title= "Prediction of "+crypto.upper()+" values with SARIMAX and ARMI Models ")
     fig.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'rgba(0, 0, 0, 0)'},
-                      title_font_color='#E6B11B', legend_font_color="White")
+                      title_font_color='#E6B11B', legend_font_color="White",  title_x=0.5)
     #fig.update_traces(line_color='#E6B11B')
     fig.update_yaxes(showgrid=False, color="White")
     fig.update_xaxes(showgrid=False, tickangle=45, color="White")
@@ -104,8 +104,8 @@ if __name__ == '__main__':
     time.sleep(1)
 
     # Coonect to MONGODB
-    # client = MongoClient("mongo",27017)  #Pour le Docker compose
-    client = MongoClient("0.0.0.0", 27017)
+    client = MongoClient("mongo",27017)  #Pour le Docker compose
+    #client = MongoClient("0.0.0.0", 27017)
 
     # Create our database
     db = client["coingecko"]
