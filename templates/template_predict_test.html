@@ -17,14 +17,21 @@
 
     <style>
 	.title {
-        position: static;
-        top: 5%;
+        position: relative;
+        top: -41%;
 	}
 	.choice {
         position: fixed;
         top: 20%;
         left: 5%;
       }
+	.valid {
+        position : fixed;
+        top : 25%;
+        left : 5%;
+
+
+    }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -66,13 +73,12 @@
   </header>
 
   <main class="title">
-      <!--<center> -->
-            <h2>Dashboard Cryptomonnaies</h2>
-            <p class="mt-auto text-white-50">Vous pouvez ici séléctionner une monnaie et observer une prédiction faite par IA des futurs prix </p>
-      <!-- </center>-->
+      <center>
+            <h2>Algorithme de prédiction</h2>
+      </center>
   </main>
 <footer class="mt-auto text-white-50">
-    <p>Application réalisée par Julien Marchadier et Valentin Rebuffey</p>
+    <p></p>
   </footer>
 </div>
 
@@ -86,8 +92,9 @@
               		<option value="{{ o }}">{{ o }}</option>
               		{% endfor %}
             		</select>
+		<button type="submit" class="btn btn-primary btn-block btn-large valid"  >Valider</button>
     		</div>
-    		<button type="submit" class="btn btn-default">Valider</button>
+  
   		</div>
 		</div>
 		</form>
