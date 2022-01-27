@@ -25,7 +25,7 @@ def graphCrypto(crypto):
         for i in ("open", "marketcap", "volume"):
             fig = px.line(df, x='date', y=i, title=i + " value of " + crypto)
             fig.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'rgba(0, 0, 0, 0)'},
-                              title_font_color='#E6B11B', legend_font_color="White")
+                              title_font_color='#E6B11B', legend_font_color="White", title_x=0.5)
             fig.update_traces(line_color='#E6B11B')
             fig.update_yaxes(showgrid=False, color="White")
             fig.update_xaxes(showgrid=False, tickangle=45, color="White")
@@ -36,7 +36,7 @@ def graphCrypto(crypto):
 
     elif request.method == 'POST':
         data = request.form.get("comp_select")
-        return redirect(url_for('graphCrypto', crypto=data, ))
+        return redirect(url_for('graphCrypto', crypto=data ))
 
 
 @app.route("/graph/<crypto>/predict", methods=['GET', 'POST'])
@@ -67,7 +67,7 @@ def IA(crypto):
     df["train"] = y_train
     df["test"] = y_test
     # 1er model
-    ARMAmodel = SARIMAX(y_train, order=(7, 2, 6))
+    ARMAmodel = SARIMAX(y_train, order=(4, 2, 4))
     ARMAmodel = ARMAmodel.fit(disp=0)
 
     y_pred_sarimax = ARMAmodel.get_forecast(len(test_set))
@@ -80,7 +80,7 @@ def IA(crypto):
     df["sarimax"] = y_pred_out_sarimax
 
     # 2ème model
-    ARIMAmodel = ARIMA(y_train, order=(3, 1, 4))
+    ARIMAmodel = ARIMA(y_train, order=(2, 1, 2))
     ARIMAmodel = ARIMAmodel.fit()
 
     y_pred_arima = ARIMAmodel.get_forecast(len(test_set["date"]))
