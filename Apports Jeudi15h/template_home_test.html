@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Projet DataEngineering</title>
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+	.title {
+        position: relative;
+        top: -38%;
+	}
+	.choice {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+    .chart {
+        position : fixed;
+        top : 25%;
+        left : 5%;
+        height: 70%;
+        width : 80%;
+
+
+    }
+     .valid {
+        position : fixed;
+        top : 25%;
+        left : 5%;
+       
+
+
+    }
+	.link {
+        position : fixed;
+        top : 20%;
+	left : 80%;
+	
+        
+       
+
+
+    }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+	
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h7 class="float-md-start mb-0">Data Engineering ESIEE - 2022</h7>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+	
+        
+      </nav>
+    </div>
+  </header>
+
+<main class="link">
+	<a class="nav-link" href="predict">Cliquer ici pour prédire les futurs prix</a>
+</main>
+
+  <main class="title">
+      <center>
+            <h2>Dashboard Cryptomonnaies</h2>
+            <p class="mt-auto text-white-50">Vous pouvez ici séléctionner une monnaie et observer les différentes données que nous récupérons auprès de <a href="https://www.coingecko.com/" class="nav-link">Coingecko</a></p>
+      </center>
+  </main>
+<footer class="mt-auto text-white-50">
+    <p>Application réalisée par Julien Marchadier et Valentin Rebuffey</p>
+  </footer>
+</div>
+
+<form class="form-inline" method="POST" action="{{ url_for('home') }}">
+		<div class="mt-auto text-white-50">		
+		<div class="choice">
+  	
+        		<span class="input-group-addon">Quelle monnaie voulez-vous observer ?   </span>
+        		    <select name="comp_select">
+              		{% for o in data %}
+              		<option value="{{ o.name }}">{{ o.name }}</option>
+              		{% endfor %}
+            		</select>
+ 		<button type="submit" class="btn btn-primary btn-block btn-large valid"  >Valider</button>   
+		</div>
+    		
+  		</div>
+		</div>
+		</form>
+
+    
+        
+</form>
+
+
+    
+  </body>
+</html>
+
