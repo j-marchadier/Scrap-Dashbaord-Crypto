@@ -13,7 +13,7 @@ app = Flask(__name__, template_folder='./templates')
 
 @app.route("/")
 def home():
-    return redirect(url_for('graphCrypto', crypto="bitcoin"))
+    return redirect(url_for('graphCrypto', crypto="bitcoin", cryptoname="bitcoin"))
 
 
 @app.route("/graph/<crypto>", methods=['GET', 'POST'])
@@ -36,7 +36,7 @@ def graphCrypto(crypto):
 
     elif request.method == 'POST':
         data = request.form.get("comp_select")
-        return redirect(url_for('graphCrypto', crypto=data))
+        return redirect(url_for('graphCrypto', crypto=data, ))
 
 
 @app.route("/graph/<crypto>/predict", methods=['GET', 'POST'])
