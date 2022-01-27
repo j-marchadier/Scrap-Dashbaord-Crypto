@@ -76,14 +76,14 @@
   </footer>
 </div>
 
-<form class="form-inline" method="POST" action="{{ url_for('predict') }}">
+<form class="form-inline" method="POST">
 		<div class="mt-auto text-white-50">		
 		<div class="choice">
   	
         		<span class="input-group-addon">Quelle monnaie voulez-vous observer ?   </span>
         		    <select name="comp_select">
               		{% for o in data %}
-              		<option value="{{ o.name }}">{{ o }}</option>
+              		<option value="{{ o }}">{{ o }}</option>
               		{% endfor %}
             		</select>
     		</div>

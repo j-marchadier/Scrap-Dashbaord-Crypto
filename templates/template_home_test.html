@@ -101,7 +101,7 @@
   </header>
 
 <main class="link">
-	<a class="nav-link btn btn-primary btn-block btn-large" style="color:rgb(255,255,255);" href="predict">Prédiction</a>
+	<a class="nav-link btn btn-primary btn-block btn-large" style="color:rgb(255,255,255);" href="../predict">Prédiction</a>
 </main>
 
   <main class="title">
@@ -117,8 +117,8 @@
 </div>
 
 
-<form class="form-inline" method="POST" action="{{ url_for('home') }}">
-		<div class="mt-auto text-white-50">		
+<form class="form-inline" method="POST">
+		<div class="mt-auto text-white-50">
 		<div class="choice">
   	
         		<span class="input-group-addon">Quelle monnaie voulez-vous observer ?   </span>
@@ -127,7 +127,7 @@
               		<option value="{{ o }}">{{ o }}</option>
               		{% endfor %}
             		</select>
- 		<button type="submit" class="btn btn-primary btn-block btn-large valid"  >Valider</button>   
+ 		<button type="submit" class="btn btn-primary btn-block btn-large valid"  >Valider</button>
 		</div>
     		
   		</div>
