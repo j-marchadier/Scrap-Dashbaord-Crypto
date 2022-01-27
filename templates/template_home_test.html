@@ -34,10 +34,28 @@
       }
     .chart {
         position : fixed;
-        top : 25%;
-        left : 5%;
-        height: 70%;
+        top : 56%;
+        left : 9%;
+        height: 45%;
         width : 80%;
+
+
+    }
+	.chart2 {
+        position : fixed;
+        top : 26%;
+        left : 10%;
+        height: 42%;
+        width : 42%;
+
+
+    }
+	.chart3 {
+        position : fixed;
+        top : 26%;
+        left : 50%;
+        height: 42%;
+        width : 42%;
 
 
     }
@@ -50,8 +68,14 @@
     }
 	.link {
         position : fixed;
-        top : 20%;
+     
 	left : 80%;
+
+    }
+	.author {
+        position : fixed;
+        top : 95%;
+	left : 77%;
 
     }
 
@@ -77,19 +101,21 @@
   </header>
 
 <main class="link">
-	<a class="nav-link" href="predict">Cliquer ici pour prédire les futurs prix</a>
+	<a class="nav-link btn btn-primary btn-block btn-large" style="color:rgb(255,255,255);" href="predict">Prédiction</a>
 </main>
 
   <main class="title">
       <center>
             <h2>Dashboard Cryptomonnaies</h2>
-            <p class="mt-auto text-white-50">Vous pouvez ici séléctionner une monnaie et observer les différentes données que nous récupérons auprès de <a href="https://www.coingecko.com/" class="nav-link">Coingecko</a></p>
+            <p class="mt-auto text-white-50">Vous pouvez ici séléctionner une monnaie et observer les différentes données que nous récupérons auprès de <a href="https://www.coingecko.com/" >Coingecko</a></p>
       </center>
   </main>
+
 <footer class="mt-auto text-white-50">
-    <p>Application réalisée par Julien Marchadier et Valentin Rebuffey</p>
+    <p><FONT size="0"><p></FONT>
   </footer>
 </div>
+
 
 <form class="form-inline" method="POST" action="{{ url_for('home') }}">
 		<div class="mt-auto text-white-50">		
@@ -125,8 +151,8 @@
     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
     <script type='text/javascript'>
-  var graphs = {{graphJSON2 | safe}};
-  Plotly.plot('chart',graphs,{});
+  var graphs2 = {{graphJSON2 | safe}};
+  Plotly.plot('chart2',graphs2,{});
 </script>
 </div>
 
@@ -134,8 +160,8 @@
     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
     <script type='text/javascript'>
-  var graphs = {{graphJSON3 | safe}};
-  Plotly.plot('chart',graphs,{});
+  var graphs3 = {{graphJSON3 | safe}};
+  Plotly.plot('chart3',graphs3,{});
 </script>
 </div>
 
