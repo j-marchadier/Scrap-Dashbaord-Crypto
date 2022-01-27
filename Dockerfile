@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.7
 
 RUN mkdir /app/ && mkdir /app/templates/
 
@@ -8,5 +8,6 @@ ADD templates/ ./templates/
 ADD requirements.txt .
 ADD CoinGecko.py .
 ADD server.py .
+ADD AirPassengers.csv .
 
 RUN pip update | pip upgrade | pip install -r requirements.txt

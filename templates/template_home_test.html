@@ -45,7 +45,6 @@
         position : fixed;
         top : 25%;
         left : 5%;
-       
 
 
     }
@@ -53,10 +52,6 @@
         position : fixed;
         top : 20%;
 	left : 80%;
-	
-        
-       
-
 
     }
 
@@ -103,7 +98,7 @@
         		<span class="input-group-addon">Quelle monnaie voulez-vous observer ?   </span>
         		    <select name="comp_select">
               		{% for o in data %}
-              		<option value="{{ o.name }}">{{ o.name }}</option>
+              		<option value="{{ o }}">{{ o }}</option>
               		{% endfor %}
             		</select>
  		<button type="submit" class="btn btn-primary btn-block btn-large valid"  >Valider</button>   
@@ -117,6 +112,32 @@
         
 </form>
 
+<div id='chart' class='chart'>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+    <script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+</div>
+
+<div id='chart2' class='chart2'>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+    <script type='text/javascript'>
+  var graphs = {{graphJSON2 | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+</div>
+
+<div id='chart3' class='chart3'>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>-->
+    <script type='text/javascript'>
+  var graphs = {{graphJSON3 | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+</div>
 
     
   </body>
