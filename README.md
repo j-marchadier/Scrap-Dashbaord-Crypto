@@ -1,6 +1,6 @@
 [![Contributors][contributors-shield]](https://github.com/juju312000/DataEngineerProject/graphs/contributors)
 [![LinkedIn_juju][linkedin-shield]](https://linkedin.com/in/jmarchadier)
-[![LinkedIn_val][linkedin-shield]](https://linkedin.com/in/VRebuffey)
+[![LinkedIn_val][linkedin-shield]](https://linkedin.com/in/valentin-rebuffey-2b34aa22a)
 
 
 <!-- PROJECT LOGO -->

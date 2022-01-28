@@ -31,7 +31,7 @@ def graphCrypto(crypto):
             fig.update_xaxes(showgrid=False, color="White")
             graph.append(json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder))
 
-        return render_template('template_home_test.html', graphJSON=graph[0], graphJSON2=graph[1],
+        return render_template('template_home.html', graphJSON=graph[0], graphJSON2=graph[1],
                                graphJSON3=graph[2], data=db.list_collection_names())
 
     elif request.method == 'POST':
@@ -44,7 +44,7 @@ def predict(crypto):
     if request.method == 'GET':
         graphJSON = IA(str(crypto))
 
-        return render_template('template_predict_test.html', graphJSON=graphJSON, data=db.list_collection_names())
+        return render_template('template_predict.html', graphJSON=graphJSON, data=db.list_collection_names())
 
     elif request.method == 'POST':
         data = request.form.get("comp_select")
