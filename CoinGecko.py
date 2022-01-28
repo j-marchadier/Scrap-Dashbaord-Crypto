@@ -43,7 +43,7 @@ def allLinks(dict, date):
 
 if __name__ == "__main__":
     jsonCryptoName = {"btc": "bitcoin", "eth": "ethereum", "bnb": "binance-coin", "ada": "cardano", "sol": "solana"}
-    links = allLinks(jsonCryptoName, ["2022-01-18", "2021-10-21"])
+    links = allLinks(jsonCryptoName, ["2022-01-28", "2021-10-21"])
 
     # Coonect to MONGODB
     client = MongoClient("mongo",27017)  #Pour le Docker compose

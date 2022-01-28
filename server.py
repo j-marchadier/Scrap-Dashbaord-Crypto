@@ -28,7 +28,7 @@ def graphCrypto(crypto):
                               title_font_color='#E6B11B', legend_font_color="White", title_x=0.5)
             fig.update_traces(line_color='#E6B11B')
             fig.update_yaxes(showgrid=False, color="White")
-            fig.update_xaxes(showgrid=False, tickangle=45, color="White")
+            fig.update_xaxes(showgrid=False, color="White")
             graph.append(json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder))
 
         return render_template('template_home_test.html', graphJSON=graph[0], graphJSON2=graph[1],
@@ -96,7 +96,7 @@ def IA(crypto):
                       title_font_color='#E6B11B', legend_font_color="White",  title_x=0.5)
     #fig.update_traces(line_color='#E6B11B')
     fig.update_yaxes(showgrid=False, color="White")
-    fig.update_xaxes(showgrid=False, tickangle=45, color="White")
+    fig.update_xaxes(showgrid=False, color="White")
     return json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
 
