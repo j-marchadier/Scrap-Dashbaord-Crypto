@@ -13,7 +13,7 @@
   * [Run The Project](#Run-the-project)
 * [Code Explanation](#Code-Explanation)
   * [CoinGecko.py](#Coingecko.py)
-  * [Server.py](#Server.py)
+  * [Server.py](#[Server.py](server.py))
 * [Note](#Note)
 * [Contact](#contact) 
 
