@@ -3,10 +3,12 @@ FROM python:3.7
 RUN mkdir /app/ && mkdir /app/templates/
 
 WORKDIR /app/
-# Install dependencies.
+
+#Add importants files
 ADD templates/ ./templates/
 ADD requirements.txt .
 ADD CoinGecko.py .
 ADD server.py .
 
-RUN pip update | pip upgrade | pip install -r requirements.txt
+# Install dependencies.
+RUN pip install -r requirements.txt

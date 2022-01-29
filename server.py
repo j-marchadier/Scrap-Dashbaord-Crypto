@@ -50,7 +50,6 @@ def predict(crypto):
         data = request.form.get("comp_select")
         return redirect(url_for('predict', crypto=data))
 
-
 def IA(crypto):
     df = pd.DataFrame(list(db[crypto].find()))[["date", "marketcap", "volume", "open"]]
     df = df.iloc[::-1].reset_index()
@@ -67,7 +66,7 @@ def IA(crypto):
     df["train"] = y_train
     df["test"] = y_test
     # 1er model
-    ARMAmodel = SARIMAX(y_train, order=(4, 2, 4))
+    ARMAmodel = SARIMAX(y_train, order=(3, 2, 3))
     ARMAmodel = ARMAmodel.fit(disp=0)
 
     y_pred_sarimax = ARMAmodel.get_forecast(len(test_set))
@@ -80,7 +79,7 @@ def IA(crypto):
     df["sarimax"] = y_pred_out_sarimax
 
     # 2ème model
-    ARIMAmodel = ARIMA(y_train, order=(2, 1, 2))
+    ARIMAmodel = ARIMA(y_train, order=(4, 1, 3))
     ARIMAmodel = ARIMAmodel.fit()
 
     y_pred_arima = ARIMAmodel.get_forecast(len(test_set["date"]))

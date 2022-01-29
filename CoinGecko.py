@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
+from datetime import datetime
 
 
 # docker-compose up -d --build  && docker compose down -v
@@ -43,11 +44,11 @@ def allLinks(dict, date):
 
 if __name__ == "__main__":
     jsonCryptoName = {"btc": "bitcoin", "eth": "ethereum", "bnb": "binance-coin", "ada": "cardano", "sol": "solana"}
-    links = allLinks(jsonCryptoName, ["2022-01-28", "2021-10-21"])
+    links = allLinks(jsonCryptoName, [str(datetime.now().date()), "2019-01-28"])
 
     # Coonect to MONGODB
-    client = MongoClient("mongo",27017)  #Pour le Docker compose
-    #client = MongoClient("0.0.0.0",27017)
+    client = MongoClient("mongo", 27017)  # Pour le Docker compose
+    # client = MongoClient("0.0.0.0",27017)
 
     # Create our database
     db = client["coingecko"]

@@ -43,6 +43,8 @@
   </ol>
 </details>
 
+## Table of contents
+* [Contact](#CONTACT) 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -79,6 +81,8 @@ The second page (when you clic on "predict") will show you a big graph where 70%
 
 To be deploy every where the application, we create a docker network with a docker compose to create 3 containers : MongoDB, PyScraping
 and PyFlask.
+
+
 
 
 <!-- CONTACT -->
