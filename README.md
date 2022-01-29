@@ -2,51 +2,12 @@
 [![LinkedIn_juju][linkedin-shield]](https://linkedin.com/in/jmarchadier)
 [![LinkedIn_val][linkedin-shield]](https://linkedin.com/in/valentin-rebuffey-2b34aa22a)
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-<h1 align="center">DataEngineerProject</h1>
-</div>
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#run project">Run project</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#developer_guide">Developer_Guide</a></li>
-      <ul>
-        <li><a href="#data_cleaning">Data_Cleaning</a></li>
-        <li>
-          <a href="#dashboard">Dashboard</a>
-            <ul>
-              <li><a href="#frontend">Frontend</a></li>
-              <li><a href="#backend">Backend</a></li>
-            </ul>
-        </li>
-      </ul>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+# DataEngineerProject
 
 ## Table of contents
-* [Contact](#CONTACT) 
+* [About the Projet](About-the-Projet)
+* [Contact](#contact) 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 This repository is a project of our second year of engineering study.
