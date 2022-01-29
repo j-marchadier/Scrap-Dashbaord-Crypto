@@ -12,6 +12,8 @@
   * [Installation](#Installation)
   * [Run The Project](#Run-the-project)
 * [Code Explanation](#Code-Explanation)
+  * [CoinGecko.py](#Coingecko.py)
+  * [Server.py](#Server.py)
 * [Contact](#contact) 
 
 ## About The Project
@@ -143,7 +145,8 @@ for i in range(len(data) // 4):
 
 Once all data is put in the database, the container shut down.
 
-###[server.py](server.py)
+### [Server.py](server.py)
+
 This code executed on our python3.7 image, is our Flask server to representing datas.
 
 In the same way, we start by connecting to MongoDB, secondly we run the server Flask :
