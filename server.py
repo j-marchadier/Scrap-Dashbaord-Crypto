@@ -93,7 +93,7 @@ def IA(crypto):
     fig = px.line(df, x='date', y=["train", "test", "sarimax", "arima"], title= "Prediction of "+crypto.upper()+" values with SARIMAX and ARMI Models ")
     fig.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'rgba(0, 0, 0, 0)'},
                       title_font_color='#E6B11B', legend_font_color="White",  title_x=0.5)
-    #fig.update_traces(line_color='#E6B11B')
+
     fig.update_yaxes(showgrid=False, color="White")
     fig.update_xaxes(showgrid=False, color="White")
     return json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
