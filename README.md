@@ -26,6 +26,8 @@ The goal is to create a web application based on Flask package.
 This application should scrape data from website and print them (like with graphs).
 Datas need to be stock on database seen in course.
 
+![img.png](data/coingecko.png)
+
 So we decide to make an analysis of cryptocurrency and try to fit a model on daily values to predict trend.
 To build this, we use [CoinGecko website](https://www.coingecko.com) to collect data from the most used crypto-currencies.
 We stock them on MongoDB client.
