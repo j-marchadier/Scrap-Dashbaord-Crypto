@@ -196,6 +196,11 @@ There are 2 main pages :
     ```
     By default the cryptocurrency used is Bitcoin but you can change it in the same way as home page.
 
+## Note
+
+One of improvement axis is to build a Cross Validation function to help models.
+
+Another note is to manage to start the Flask container when the CoinGecko one is finished. We did not manage to implement it
 
 
 ## Contact
