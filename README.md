@@ -5,7 +5,7 @@
 # DataEngineerProject
 
 ## Table of contents
-* [About the Projet](About-the-Projet)
+* [About the Projet](About-the-Project)
 * [Contact](#contact) 
 
 ## About The Project
