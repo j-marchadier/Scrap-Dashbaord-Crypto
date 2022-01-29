@@ -13,7 +13,7 @@
   * [Run The Project](#Run-the-project)
 * [Code Explanation](#Code-Explanation)
   * [CoinGecko.py](#Coingecko.py)
-  * [Server.py](#[Server.py](server.py))
+  * [Server.py](#Server.py)
 * [Note](#Note)
 * [Contact](#contact) 
 
@@ -115,9 +115,9 @@ Some think like that should appear :
 ![img.png](data/prediction.png)
 
 ## Code Explanation 
-### [CoinGecko.py](CoinGecko.py)
+### CoinGecko.py
 
-This python code executed on our python3.7 image, is our scraping process. 
+This [CoinGecko.py](CoinGecko.py) python code executed on our python3.7 image, is our scraping process. 
 We use [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) to scrape data on coingecko website.
 First we name all crypto that we want get data from.
 
@@ -146,9 +146,9 @@ for i in range(len(data) // 4):
 
 Once all data is put in the database, the container shut down.
 
-### [Server.py](server.py)
+### server.py
 
-This code executed on our python3.7 image, is our Flask server to representing datas.
+This [Server.py](server.py) code executed on our python3.7 image, is our Flask server to representing datas.
 
 In the same way, we start by connecting to MongoDB, secondly we run the server Flask :
 ```python
