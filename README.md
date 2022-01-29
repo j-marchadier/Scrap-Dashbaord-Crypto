@@ -5,7 +5,7 @@
 # DataEngineerProject
 
 ## Table of contents
-* [About the Projet](About-the-Project)
+* [About the Projet](#About-the-Project)
 * [Contact](#contact) 
 
 ## About The Project
@@ -44,9 +44,6 @@ To be deploy every where the application, we create a docker network with a dock
 and PyFlask.
 
 
-
-
-<!-- CONTACT -->
 ## Contact
 
 MARCHADIER Julien - julien.marchadier@edu.esiee.fr
