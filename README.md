@@ -14,6 +14,7 @@
 * [Code Explanation](#Code-Explanation)
   * [CoinGecko.py](#Coingecko.py)
   * [Server.py](#Server.py)
+* [Note](#Note)
 * [Contact](#contact) 
 
 ## About The Project
