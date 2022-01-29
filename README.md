@@ -12,8 +12,8 @@
   * [Installation](#Installation)
   * [Run The Project](#Run-the-project)
 * [Code Explanation](#Code-Explanation)
-  * [CoinGecko.py](#Coingecko.py)
-  * [Server.py](#Server.py)
+  * [CoinGecko](#Coingecko)
+  * [Server](#Server)
 * [Note](#Note)
 * [Contact](#contact) 
 
@@ -115,7 +115,7 @@ Some think like that should appear :
 ![img.png](data/prediction.png)
 
 ## Code Explanation 
-### CoinGecko.py
+### CoinGecko
 
 This [CoinGecko.py](CoinGecko.py) python code executed on our python3.7 image, is our scraping process. 
 We use [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) to scrape data on coingecko website.
@@ -146,7 +146,7 @@ for i in range(len(data) // 4):
 
 Once all data is put in the database, the container shut down.
 
-### server.py
+### Server
 
 This [Server.py](server.py) code executed on our python3.7 image, is our Flask server to representing datas.
 
