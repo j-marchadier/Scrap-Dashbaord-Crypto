@@ -5,35 +5,35 @@
 # DataEngineerProject
 
 ## Table of contents
-* [About the Projet](#About-the-Project)
-* [Get Starting](#Get-Strating)
-  * [Prerequisites](#Prerequisites)
-  * [Build with](#Build-with)
-  * [Installation](#Installation)
-  * [Run The Project](#Run-the-project)
-* [Code Explanation](#Code-Explanation)
-  * [CoinGecko](#Coingecko)
-  * [Server](#Server)
-* [Note](#Note)
-* [Contact](#contact) 
+- [DataEngineerProject](#dataengineerproject)
+  - [Table of contents](#table-of-contents)
+  - [About The Project](#about-the-project)
+    - [Prerequisites](#prerequisites)
+    - [Build with](#build-with)
+    - [Run the project](#run-the-project)
+  - [Code Explanation](#code-explanation)
+    - [CoinGecko](#coingecko)
+    - [Server](#server)
+  - [Note](#note)
+  - [Contact](#contact)
 
 ## About The Project
 
 This repository is a project of our second year of engineering study.
-It took place in 1 month in DataEngineer course.
+It took place in 1 month in a Data Engineering course.
 
-The goal is to create a web application based on Flask package.
-This application should scrape data from website and print them (like with graphs).
-Datas need to be stock on database seen in course.
+Our goal was to create a web application based on the Flask package.
+This application should scrape data from website and build a dashboard with.
+Datas need to be stocked on database seen in course.
 
 ![img.png](data/coingecko.png)
 
-So we decide to make an analysis of cryptocurrency and try to fit a model on daily values to predict trend.
-To build this, we use [CoinGecko website](https://www.coingecko.com) to collect data from the most used crypto-currencies.
+We decided to make an analysis of cryptocurrency and then fit a model on daily values to predict trend.
+To build this we use [CoinGecko website](https://www.coingecko.com) to collect data from the most used crypto-currencies.
 We stock them on MongoDB client.
-After collecting all the data, we start a Flask server who show 3 graphics :
+After collecting all the datas, we start a Flask server which shows 3 graphics :
 
-* <u>MarketCap</u>: represent the total value of cryptocurrency in circulation. It can be obtain by multiply cryptocurrency value by the number of cryptocurrency.
+* <u>MarketCap</u>: represent the total value of cryptocurrency in circulation. It is obtained by multiplying cryptocurrency value with the cryptocurrency volume.
 
 
 * <u>Volume</u> : represent the number of cryptocurrency in circulation.
@@ -41,7 +41,7 @@ After collecting all the data, we start a Flask server who show 3 graphics :
 
 * <u>Value</u> : represent the cost of a cryptocurrency at one given time
 
-The second page (when you clic on "predict") will show you a big graph where 70% first values represent the value of the cryptocurrency and on 30% last values there are :
+The second page (when you clic on "predict") will show you a graph with the trend prediction such as :
 
 * <u> Blue </u> : first 70% values of cryptocurrency 
 
@@ -54,13 +54,12 @@ The second page (when you clic on "predict") will show you a big graph where 70%
 
 * <u> Purple </u> : Predict values bases on AMIRA model (Seasonal AutoRegressive Integrated Moving Average)
 
-To be deploy every where the application, we create a docker network with a docker compose to create 3 containers : MongoDB, PyScraping
-and PyFlask.
+To make our application deployable everywhere, we made a docker network with a docker compose to create 3 containers : MongoDB, PyScraping and PyFlask.
 
 ##Getting Started
 ### Prerequisites
 
-* <u>Docker</u> is install and update.
+* <u>Docker</u> is installed and updated.
 
 
 * Enough space (1,5 Go).
@@ -105,13 +104,13 @@ To run the project, it's the same command than 'Installation' :
   docker-compose up -d
   ```
 
-If not problem happen during previous step, you can open your web browser and looking for [this website](http://localhost:5001/) on your localhost ip on port 5001.
+If there are no errors in the previous step, you can open your web browser and looking for [this website](http://localhost:5001/) on your localhost ip on port 5001.
 
 Some think like that should appear : 
 
 ![img.png](data/home.png)
 
-To see the trend of our prediction, clic on the button "Predict" on Left Up of the screen.
+To see the trend of our prediction, clic on the button "Predict" at the top right of the screen.
 Some think like that should appear :
 
 ![img.png](data/prediction.png)
@@ -146,11 +145,11 @@ for i in range(len(data) // 4):
     coll.insert_one({"date": data_dates[i], "marketcap": data[(i * 4)], "volume": data[(i * 4) + 1],"open": data[(i * 4) + 2],"close": data[(i * 4) + 3]})
 ```
 
-Once all data is put in the database, the container shut down.
+Once all datas are in the database, the container shuts down.
 
 ### Server
 
-This [Server.py](server.py) code executed on our python3.7 image, is our Flask server to representing datas.
+This [Server.py](server.py) code executed on our python3.7 image, is our Flask server which represents datas.
 
 In the same way, we start by connecting to MongoDB, secondly we run the server Flask :
 ```python
@@ -164,13 +163,13 @@ There are 2 main pages :
     ```python
     @app.route("/graph/<crypto>", methods=['GET', 'POST'])
     ```
-  This page show 3 graphics in function of cryptocurrency parameter. By default it's Bitcoin.
+  This page shows 3 graphics in function of cryptocurrency parameter. By default it's Bitcoin.
 
 * Predict page 
     ```python
     @app.route("/graph/<crypto>/predict", methods=['GET', 'POST'])
     ```
-  When this page is loaded, 2 models are trained and produce trend. They appear on graphic.
+  When this page is loaded, 2 models are trained and produce trend. They appear on the graphic.
     ```python
     # 1er model
     ARMAmodel = SARIMAX(y_train, order=(3, 2, 3))
