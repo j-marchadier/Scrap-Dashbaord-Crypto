@@ -2,7 +2,7 @@
 [![LinkedIn_juju][linkedin-shield]](https://linkedin.com/in/jmarchadier)
 [![LinkedIn_val][linkedin-shield]](https://linkedin.com/in/valentin-rebuffey-2b34aa22a)
 
-# DataEngineerProject
+# Scrap-Dashboard-Crypto
 
 ## Table of contents
 - [DataEngineerProject](#dataengineerproject)
